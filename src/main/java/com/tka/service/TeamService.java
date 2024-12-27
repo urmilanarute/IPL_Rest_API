@@ -32,18 +32,23 @@ public class TeamService {
 		
 	}
 		public String deleteTeam(int id) {
-			int status=teamDao.deleteTeam(id);
-			if(status==0) {
-				return "Team not found to delete";
+			 int status=teamDao.deleteTeam(id);
+			 if (status==0) {
+				return "Team not found";
 			}else {
-				return "Team Deleted";
+				return "Team deleted";
 
 			}
-			
+		
 			
 		}
-		public int updateTeam(int id,Team team) {
-			return teamDao.updateTeam(id, team);
+		public String updateTeam(int id,Team team) {
+			int status = teamDao.updateTeam(id, team);
+			if(status==0) {
+				return "Team not found";
+			}else {
+				return "Team Update";
+			}
 			
 		}
 }

@@ -77,6 +77,7 @@ public class Match {
 		return "Match [matchId=" + matchId + ", teamOneName=" + teamOneName + ", teamTwoname=" + teamTwoname + ", date="
 				+ date + ", venue=" + venue + ", result=" + result + "]";
 	}
+
 	
 	
 	

@@ -12,6 +12,12 @@ public class TeamDao {
 	
 	List<Team>teams=new ArrayList<Team>();
 	
+	
+
+	public TeamDao() {
+		teams.add(new Team(1, "MI", "Mumbai", "Sachin"));
+		teams.add(new Team(2,"RCB", "Banglore","Virat"));
+	}
 
 	public String addTeam(Team team) {
 		teams.add(team);
@@ -41,7 +47,7 @@ public class TeamDao {
 	public int deleteTeam(int id) {
 		for (Team team : teams) {
 			if (team.getTeamId()==id) {
-				teams.remove(id);
+				teams.remove(team);
 				return 1;
 			}
 		}

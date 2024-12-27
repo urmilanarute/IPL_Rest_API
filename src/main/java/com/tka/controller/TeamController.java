@@ -51,14 +51,14 @@ public class TeamController {
 		
 	}
 	@DeleteMapping("/api/teams/{id}")
-	public String deleteTeam(@PathVariable("id") int id ) {
-		return teamService.deleteTeam(id);
+	public void deleteTeam(@PathVariable("id") int id ) {
+		teamService.deleteTeam(id);
 		
 	}
 	
 	
 	@PutMapping("/api/teams/{id}")
-	public int updateTeam(@RequestBody Team team,@PathVariable int id) {
+	public String updateTeam(@RequestBody Team team,@PathVariable int id) {
 		return teamService.updateTeam(id,team);
 		
 	}
